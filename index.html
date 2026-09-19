@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NomadLife: v_omni Pan-Asia Emperor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: '#0ff',
+                        darkbg: '#0a0a0a'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #fff; }
+        .cyber-border { border: 1px solid #0ff; box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col p-6">
+    <header class="mb-8 border-b border-gray-800 pb-4">
+        <h1 class="text-3xl font-bold text-cyber mb-2">v_omni Core: Emperor (Big 5)</h1>
+        <p class="text-gray-400">NomadLife Oracle Intelligence - 2,500+ Nodes (Vietnam, Thailand, Philippines, Japan, China)</p>
+    </header>
+
+    <main class="flex-grow flex flex-col gap-6 lg:flex-row">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-1/3 flex flex-col gap-6">
+            <div class="bg-gray-900 p-5 rounded-lg cyber-border">
+                <h2 class="text-xl font-semibold mb-4 text-white">Arbitrage Metrics</h2>
+                <ul id="arbitrage-list" class="space-y-3 text-sm text-gray-300">
+                    <li class="animate-pulse">Loading core engine...</li>
+                </ul>
+            </div>
+            <div class="bg-gray-900 p-5 rounded-lg cyber-border">
+                <h2 class="text-xl font-semibold mb-4 text-white">Database Status</h2>
+                <div id="db-status" class="text-sm text-gray-300">
+                    <p class="animate-pulse">Connecting to local node...</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content (Search & Results) -->
+        <section class="w-full lg:w-2/3 flex flex-col gap-6">
+            <div class="bg-gray-900 p-5 rounded-lg cyber-border flex gap-4">
+                <input type="text" id="search-input" placeholder="Search locations, threats, protocols, or keywords..." class="flex-grow bg-black border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-cyber">
+                <button id="search-btn" class="bg-cyan-900 hover:bg-cyan-800 text-cyan-100 px-6 py-2 rounded border border-cyber transition">Search</button>
+            </div>
+
+            <div id="results-container" class="flex-col gap-4 overflow-y-auto max-h-[70vh] hidden">
+                <!-- Results injected here -->
+            </div>
+            
+            <div id="welcome-panel" class="bg-gray-900 p-8 rounded-lg cyber-border text-center text-gray-400">
+                <svg class="w-16 h-16 mx-auto mb-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                <p>Welcome to the NomadLife Oracle.</p>
+                <p class="text-sm mt-2">Try searching for "Tea House", "Tachinbo", "Bottakuri", "Tanim-Bala", or "Thong Lo".</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
